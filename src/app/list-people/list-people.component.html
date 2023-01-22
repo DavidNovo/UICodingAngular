@@ -1,3 +1,4 @@
+<h3 class="display-3">List of People: {{people.length}}</h3>
 <div class="card-container d-flex flex-wrap">
   <div class="row">
     <div *ngFor="let person of people" class="card  border-success col-12
@@ -6,6 +7,7 @@ col-sm-6 col-md-4 col-lg-3">
         <h5 class="card-title">Title: {{ person.name }}</h5>
         <p class="card-text">{{ person.email }}</p>
         <p class="card-text">{{ person.address.city }}, {{ person.address.zipcode }}</p>
+        <button (click)="deleteCard(person)">Delete</button>
       </div>
     </div>
   </div>

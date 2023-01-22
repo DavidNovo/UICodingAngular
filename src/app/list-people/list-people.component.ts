@@ -19,4 +19,12 @@ export class ListPeopleComponent {
       this.people = data;
     });
   }
+
+  deleteCard(person: any) {
+    const index = this.people.indexOf(person);
+    if (index > -1) {
+      this.people.splice(index, 1);
+    }
+  }
+
 }
